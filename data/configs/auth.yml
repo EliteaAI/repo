@@ -1,0 +1,6 @@
+auth_mode: rpc
+
+enable_cache: false
+
+public_rules:
+- uri: '/auth/.*'

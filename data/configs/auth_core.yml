@@ -1,0 +1,6 @@
+db_url: "sqlite:////data/auth.db"
+
+url_prefix: "/auth"
+static_url_prefix: "/auth"
+
+auth_provider: form

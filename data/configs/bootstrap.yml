@@ -1,0 +1,24 @@
+debug: false
+
+
+plugin_repo:
+- type: elitea_github
+  release: main
+  add_source_data: true
+  add_head_data: true
+
+
+preordered_plugins:
+- auth_core
+#
+- auth_init
+- auth_mappers
+#
+- auth_form
+#
+- auth_idp_rpc
+#
+- auth
+#
+- repo_core
+- repo_target
