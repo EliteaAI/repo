@@ -15,6 +15,14 @@ on:
           default: "ghcr.io/eliteaai/repo:latest"
           description: "Docker image name and tag (result)"
           required: true
+        image_user:
+          default: "www-data"
+          description: "Container runtime user"
+          required: true
+        image_group:
+          default: "www-data"
+          description: "Container runtime group"
+          required: true
 
 permissions:
   contents: read
@@ -58,3 +66,6 @@ jobs:
             BUILDKIT_CONTEXT_KEEP_GIT_DIR=true
             BASE_IMAGE=${{ inputs.base_image }}
             BUNDLE_OBJECT=${{ inputs.bundle_object }}
+            RUNTIME_USER=${{ inputs.image_user }}
+            RUNTIME_GROUP=${{ inputs.image_group }}
+
