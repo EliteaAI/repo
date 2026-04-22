@@ -6,6 +6,9 @@ COPY data /data
 ARG BUNDLE_OBJECT
 ENV BUNDLE_OBJECT=${BUNDLE_OBJECT}
 
+ARG RUNTIME_USER
+ARG RUNTIME_GROUP
+
 RUN set -x \
   && mkdir -p /data/repo \
   && curl -sL https://repo.elitea.ai/target/public/depot/export/bundles/${BUNDLE_OBJECT}/data | tar -C /data/repo -xzvf - \
