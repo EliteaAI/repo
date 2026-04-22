@@ -9,9 +9,9 @@ ENV BUNDLE_OBJECT=${BUNDLE_OBJECT}
 RUN set -x \
   && mkdir -p /data/repo \
   && curl -sL https://repo.elitea.ai/target/public/depot/export/bundles/${BUNDLE_OBJECT}/data | tar -C /data/repo -xzvf - \
-  && chown -R www-data /data
+  && chown -R ${RUNTIME_USER}:${RUNTIME_GROUP} /data
 
-USER www-data
+USER ${RUNTIME_USER}:${RUNTIME_GROUP}
 
 ENV ADMIN_LOGIN=admin
 ENV ADMIN_APPPASS=internal
