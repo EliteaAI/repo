@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
         base_image:
-          default: "ghcr.io/eliteaai/pylon:1.2.28-tools"
+          default: "ghcr.io/eliteaai/pylon:1.2.31-tools"
           description: "Docker image name and tag (base)"
           required: true
         bundle_object:
